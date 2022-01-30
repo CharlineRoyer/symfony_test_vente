@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PosterController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+
+    {{poster.nom}} - {{poster.id}} - {{poster.description}} - {{poster.prix}} €
+
+    <a href="{{ path('poster_delete', {'id': poster.id})}}">Supprimer</a>
+     <a href="{{ path('poster_modify', {'id': poster.id})}}">Modifier</a>
+
+</div>
+{% endblock %}

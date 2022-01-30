@@ -1,0 +1,36 @@
+.container_info_poster{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.container_info_poster div{
+    padding: 10px;
+ 
+}
+
+.container_info_poster .action{
+    text-decoration: none;
+}
+
+.ajouter{
+    width: 50px;
+    padding: 10px;
+    background-color: rgb(36, 133, 133);
+    text-align: center;
+    border-radius: 30%;
+    margin: 2em auto 0;
+    
+    
+}
+.ajouter:hover{
+    background-color:rgb(77, 167, 167);
+}
+.ajouter a{
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 10px;
+}

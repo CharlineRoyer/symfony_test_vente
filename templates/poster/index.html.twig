@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PosterController!{% endblock %}
+
+{% block body %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/resume.css')}}">
+{% endblock %}
+
+<section>
+    <h1 class="titre">Liste de posters</h1>
+
+
+{% for poster in posters %}
+  <div class="container_info_poster">
+        <div>
+            <a href="{{ path('onePoster', {'id': poster.id})}}">{{poster.nom}}</a>
+        </div>
+        <div>
+        <a title="Voir" class="action" href="{{ path('onePoster', {'id': poster.id})}}">👁️</a> |
+            <a title="Modifier" class="action" href="{{ path('poster_modify', {'id': poster.id})}}">🖊️ </a> | 
+            <a title="Supprimer" class="action" href="{{ path('poster_delete', {'id': poster.id})}}">🗑️</a>
+        </div>       
+  </div>
+{% endfor %}
+
+<div class="ajouter">
+
+<a href="{{ path('poster_add')}}"> + </a>
+</div>
+
+</section>
+{% endblock %}
